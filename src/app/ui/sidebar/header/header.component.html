@@ -1,0 +1,41 @@
+<div class="sidebar-header">
+  <div class="sidebar-information">
+    <div class="sidebar-actions">
+      <p-button icon="pi pi-search" [rounded]="true" [text]="true"></p-button>
+      <p-menu #addMenu [model]="addItems" [popup]="true"></p-menu>
+      <p-button
+        icon="pi pi-plus-circle"
+        [rounded]="true"
+        [text]="true"
+        (click)="addMenu.toggle($event)"
+        class="addBtn"
+      ></p-button>
+
+      <!-- Other Buttons -->
+      <p-button icon="pi pi-list" [rounded]="true" [text]="true"></p-button>
+      <p-button icon="pi pi-bell" [rounded]="true" [text]="true"></p-button>
+      <p-button
+        icon="pi pi-question-circle"
+        [rounded]="true"
+        [text]="true"
+      ></p-button>
+      <p-button
+        label="Site Login"
+        icon="pi pi-sign-in"
+        iconPos="right"
+        class="website-signin"
+      />
+
+      <!-- User Menu -->
+      <p-menu #userMenu [model]="items" [popup]="true"></p-menu>
+      <div class="sidebar-user" (click)="userMenu.toggle($event)">
+        <div class="sidebar-user-wrapper">
+          <div class="user-img-wrapper">
+            <img src="guy.webp" alt="A guy" />
+          </div>
+          <span>John Doe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
